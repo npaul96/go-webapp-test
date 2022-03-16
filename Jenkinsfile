@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('dev') {
+    stage('git-checkout') {
       steps {
-        sh 'go test ./...'
+        git 'https://github.com/AdminTurnedDevOps/go-webapp-sample.git'
       }
     }
 
